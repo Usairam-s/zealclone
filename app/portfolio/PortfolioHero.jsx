@@ -4,6 +4,7 @@ import {
   PortfolioHeading,
   PortfolioText,
 } from "@/components/mui/Portfolio";
+import AnimateFromLeft from "@/components/AnimateFromLeft/AnimateFromLeft";
 
 export default function PortfolioHero() {
   return (
@@ -12,12 +13,14 @@ export default function PortfolioHero() {
         sx={{ color: "#f07800", fontFamily: "BDSans" }}
         variant="h1"
       >
-        Portfolio
+        <AnimateFromLeft text="Portfolio." />
       </PortfolioHeading>
       <PortfolioText>
-        Welcome to explore the heart of our company through projects that unfold
+        <AnimateFromLeft
+          text=" Welcome to explore the heart of our company through projects that unfold
         our story of innovation and success. We persist in seeking new
-        opportunities within healthcare.
+        opportunities within healthcare."
+        />
       </PortfolioText>
     </PortfolioHeroContainer>
   );

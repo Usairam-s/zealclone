@@ -6,6 +6,8 @@ import ThirdSection from "@/components/ThirdSection/ThirdSection";
 import { MainContainer } from "@/components/mui/MainStyles";
 import FourthSection from "@/components/FourthSection/FourthSection";
 import { HomeSectionWrapper } from "@/components/HomeSectionWrapper/HomeSectionWrapper";
+import HomePortfolioCards from "@/components/HomePortfolioCards/HomePortfolioCards";
+import AnimateFromLeft from "@/components/AnimateFromLeft/AnimateFromLeft";
 
 export default function Home() {
   return (
@@ -21,8 +23,7 @@ export default function Home() {
           variant="h2"
           className={stylesHome.heading}
         >
-          Raising Investments, <br /> Transforming
-          <br /> Futures.
+          <AnimateFromLeft text="Raising Investments,<br>Transforming<br> Futures." />
         </Typography>
       </Box>
 
@@ -35,6 +36,9 @@ export default function Home() {
 
         <MainContainer>
           <FourthSection />
+        </MainContainer>
+        <MainContainer>
+          <HomePortfolioCards />
         </MainContainer>
       </HomeSectionWrapper>
     </>

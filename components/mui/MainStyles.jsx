@@ -105,3 +105,67 @@ export const StyledImage = styled("img")(({ theme }) => ({
     width: "100%",
   },
 }));
+
+export const HomePortfolioCardsWrapper = styled(Box)(({ theme }) => ({
+  padding: theme.spacing(4),
+  backgroundColor: "#008282",
+  borderRadius: "20px",
+  overflow: "hidden",
+  position: "relative",
+}));
+
+export const CardsContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  overflowX: "scroll",
+
+  scrollSnapType: "x mandatory",
+  gap: theme.spacing(2),
+  scrollBehavior: "smooth",
+  padding: theme.spacing(1),
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
+  [theme.breakpoints.up("md")]: {
+    gap: theme.spacing(3),
+  },
+}));
+
+export const Card = styled(Box)(({ theme }) => ({
+  flex: "0 0 auto",
+  width: "100%",
+  scrollSnapAlign: "start",
+  [theme.breakpoints.up("sm")]: {
+    width: "calc(50% - 16px)", // 2 cards at a time on small screens
+  },
+  [theme.breakpoints.up("md")]: {
+    width: "calc(33.33% - 16px)", // 3 cards at a time on medium screens
+  },
+  [theme.breakpoints.up("lg")]: {
+    width: "calc(25% - 16px)", // 4 cards at a time on large screens
+  },
+}));
+
+export const NavigationButton = styled(Box)(({ theme }) => ({
+  position: "absolute",
+  top: "50%",
+  transform: "translateY(-50%)",
+  backgroundColor: "rgba(0, 0, 0, 0.5)",
+  color: "white",
+  cursor: "pointer",
+  zIndex: 1,
+  padding: theme.spacing(1),
+  borderRadius: "50%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "40px",
+  height: "40px",
+}));
+
+export const PrevButton = styled(NavigationButton)(({ theme }) => ({
+  left: theme.spacing(1),
+}));
+
+export const NextButton = styled(NavigationButton)(({ theme }) => ({
+  right: theme.spacing(1),
+}));

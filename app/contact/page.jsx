@@ -23,7 +23,7 @@ export default function ContactUs() {
           textAlign: "center",
         }}
       >
-        <Typography variant="h2" sx={{ mb: 2 }}>
+        <Typography variant="h2" sx={{ mb: 2, fontFamily: "BDSans" }}>
           Contact Us
         </Typography>
         <Typography variant="body1" sx={{ mb: 1 }}>

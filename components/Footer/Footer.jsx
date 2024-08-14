@@ -1,4 +1,3 @@
-// components/Footer.js
 import React from "react";
 import { Box, Typography, IconButton } from "@mui/material";
 import { StyledFooter } from "../mui/Footer";
