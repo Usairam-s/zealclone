@@ -1,3 +1,5 @@
+/* Navbar.module.css */
+
 .header {
   position: fixed;
   top: 0;
@@ -26,6 +28,11 @@
   gap: 4px;
 }
 
+.icon {
+  filter: invert(32%) sepia(100%) saturate(2332%) hue-rotate(83deg)
+    brightness(93%) contrast(91%);
+}
+
 .rightSide {
   display: flex;
   align-items: center;
@@ -45,12 +52,56 @@
   color: rgb(195, 192, 192);
 }
 
+.navLink {
+  text-decoration: none;
+  color: rgb(195, 192, 192);
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+}
+
+.navLink::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.navLink:hover {
+  color: #b4f046;
+}
+
+.navLink:hover::after {
+  background-color: #b4f046;
+}
+
+.activeLink {
+  color: #b4f046;
+}
+
+.activeLink::after {
+  background-color: #b4f046;
+  height: 4px; /* Increase thickness for the active link underline */
+  transform: scaleY(1); /* Ensure underline is visible */
+}
+
 .subLogo {
   display: flex;
   flex-direction: row;
   align-items: center;
   color: rgb(222, 222, 222);
   font-size: 0.7rem;
+}
+
+.line {
+  border: none;
+  border-left: 1px solid rgb(226, 226, 226);
+  height: 10px;
+  margin-right: 4px;
 }
 
 .hamburger {

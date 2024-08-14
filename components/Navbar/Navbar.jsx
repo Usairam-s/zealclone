@@ -6,10 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "@mui/material/styles";
 import { Menu } from "@mui/icons-material";
+import { usePathname } from "next/navigation";
+import { SvgIcon } from "../SvgIcon/SvgIcon";
 
 export default function Navbar() {
   const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -19,7 +22,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <nav className={styles.mainNav}>
         <div className={styles.leftSide}>
-          <Image src="/logo.svg" alt="logo" width={30} height={30} />
+          <SvgIcon color="#B4F046" />
           <div className={styles.subLogo}>
             <hr className={styles.line} />
             <span>Based in Peru</span>
@@ -29,19 +32,54 @@ export default function Navbar() {
         <div className={styles.rightSide}>
           <ul>
             <li>
-              <Link href="/">Home</Link>
+              <Link
+                href="/"
+                className={
+                  pathname === "/" ? styles.activeLink : styles.navLink
+                }
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link
+                href="/about"
+                className={
+                  pathname === "/about" ? styles.activeLink : styles.navLink
+                }
+              >
+                About
+              </Link>
             </li>
             <li>
-              <Link href="/approach">Approach</Link>
+              <Link
+                href="/approach"
+                className={
+                  pathname === "/approach" ? styles.activeLink : styles.navLink
+                }
+              >
+                Approach
+              </Link>
             </li>
             <li>
-              <Link href="/portfolio">Portfolio</Link>
+              <Link
+                href="/portfolio"
+                className={
+                  pathname === "/portfolio" ? styles.activeLink : styles.navLink
+                }
+              >
+                Portfolio
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link
+                href="/contact"
+                className={
+                  pathname === "/contact" ? styles.activeLink : styles.navLink
+                }
+              >
+                Contact
+              </Link>
             </li>
           </ul>
           <Button
@@ -71,27 +109,55 @@ export default function Navbar() {
         </button>
         <ul>
           <li>
-            <Link href="/" onClick={toggleMenu}>
+            <Link
+              href="/"
+              className={pathname === "/" ? styles.activeLink : styles.navLink}
+              onClick={toggleMenu}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/" onClick={toggleMenu}>
+            <Link
+              href="/about"
+              className={
+                pathname === "/about" ? styles.activeLink : styles.navLink
+              }
+              onClick={toggleMenu}
+            >
               About
             </Link>
           </li>
           <li>
-            <Link href="/" onClick={toggleMenu}>
+            <Link
+              href="/approach"
+              className={
+                pathname === "/approach" ? styles.activeLink : styles.navLink
+              }
+              onClick={toggleMenu}
+            >
               Approach
             </Link>
           </li>
           <li>
-            <Link href="/" onClick={toggleMenu}>
+            <Link
+              href="/portfolio"
+              className={
+                pathname === "/portfolio" ? styles.activeLink : styles.navLink
+              }
+              onClick={toggleMenu}
+            >
               Portfolio
             </Link>
           </li>
           <li>
-            <Link href="/" onClick={toggleMenu}>
+            <Link
+              href="/contact"
+              className={
+                pathname === "/contact" ? styles.activeLink : styles.navLink
+              }
+              onClick={toggleMenu}
+            >
               Contact
             </Link>
           </li>
