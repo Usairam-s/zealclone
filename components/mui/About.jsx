@@ -143,7 +143,7 @@ export const CardDescription = styled(Typography)(({ theme }) => ({
 export const AboutImage = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "80vh",
-  backgroundImage: `url('/AboutImage.webp')`,
+  backgroundImage: `url('/aboutImage.jpg')`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
