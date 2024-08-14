@@ -87,7 +87,10 @@ export const Card = styled(MuiCard)(({ theme, bgColor }) => ({
   display: "flex",
   alignItems: "flex-start",
   backgroundColor: bgColor,
-  padding: "40px",
+  padding: "70px",
+  [theme.breakpoints.down("sm")]: {
+    padding: "30px",
+  },
   boxSizing: "border-box",
 }));
 
@@ -116,21 +119,24 @@ export const CardContent = styled(MuiCardContent)(({ theme }) => ({
 }));
 
 export const CardHeading = styled(Typography)(({ theme }) => ({
-  fontSize: "2rem",
+  fontSize: "3.5rem",
   fontWeight: "bold",
   marginBottom: "auto",
   [theme.breakpoints.down("sm")]: {
-    fontSize: "1.5rem",
+    fontSize: "2rem",
     textAlign: "center",
   },
 }));
 
 export const CardDescription = styled(Typography)(({ theme }) => ({
-  fontSize: "1.2rem",
-  marginTop: "auto",
-  [theme.breakpoints.down("sm")]: {
+  fontSize: "1.7rem",
+  // marginTop: "auto",
+  maxWidth: "500px",
+  marginTop: "100px",
+  [theme.breakpoints.down("md")]: {
     fontSize: "1rem",
     textAlign: "center",
+    marginTop: "140px",
   },
 }));
 
@@ -155,9 +161,17 @@ export const CultureContainer = styled(Box)(({ theme }) => ({
   margin: "auto",
   padding: "20px",
   boxSizing: "border-box",
+  [theme.breakpoints.down("md")]: {
+    textAlign: "left",
+    padding: "10px",
+    marginTop: "80px",
+    marginBottom: "80px",
+  },
   [theme.breakpoints.down("sm")]: {
     textAlign: "left",
     padding: "10px",
+    marginTop: "100px",
+    marginBottom: "140px",
   },
 }));
 

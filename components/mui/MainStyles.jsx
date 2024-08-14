@@ -31,6 +31,7 @@ export const SecondContainer = styled(Box)(({ theme }) => ({
 export const RightSide = styled(Box)(({ theme }) => ({
   flex: 1,
   color: "#B4F046",
+
   maxWidth: "500px",
   paddingLeft: "16px",
   [theme.breakpoints.down("md")]: {
@@ -44,7 +45,8 @@ export const StyledButton = styled(Button)(({ theme }) => ({
   padding: "6px 12px",
   backgroundColor: "transparent",
   "&:hover": {
-    backgroundColor: theme.palette.grey[200],
+    backgroundColor: "gray",
+    color: "black",
   },
 }));
 
@@ -60,11 +62,15 @@ export const ThirdContainer = styled(Box)(({ theme }) => ({
     flexDirection: "column",
     textAlign: "center",
   },
+  [theme.breakpoints.down("sm")]: {
+    padding: "50px",
+  },
 }));
 
 export const ThirdLeftSide = styled(Box)(({ theme }) => ({
   flex: 1,
   maxWidth: "600px",
+
   paddingRight: "20px",
   [theme.breakpoints.down("md")]: {
     paddingRight: "0",

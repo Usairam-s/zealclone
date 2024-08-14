@@ -66,9 +66,9 @@ const cardData = [
 export default function MainPortfolio() {
   return (
     <Container>
-      <Typography sx={{ marginTop: "10px", marginLeft: "40px" }}>
+      {/* <Typography sx={{ marginTop: "10px", marginLeft: "40px" }}>
         Heleo
-      </Typography>
+      </Typography> */}
       <PortfolioWrapper>
         {cardData.map((card, index) => (
           <Box

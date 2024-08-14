@@ -12,4 +12,7 @@ export const StyledFooter = styled("footer")(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     padding: theme.spacing(6, 10),
   },
+  [theme.breakpoints.down("md")]: {
+    fontSize: "10px",
+  },
 }));
