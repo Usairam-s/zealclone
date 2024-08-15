@@ -35,6 +35,7 @@ const HomePortfolioCardsWrapper = styled(Box)(({ theme }) => ({
   borderRadius: "20px",
   overflow: "hidden",
   position: "relative",
+  padding: "120px",
 }));
 
 const CardsContainer = styled(Box)(({ theme }) => ({
@@ -123,6 +124,12 @@ export default function HomePortfolioCards() {
 
   return (
     <HomePortfolioCardsWrapper>
+      <Typography
+        variant="h2"
+        sx={{ fontFamily: "BDSans", marginBottom: "50px", color: "#B4F046" }}
+      >
+        Portfolio
+      </Typography>
       <PrevButton onClick={() => scroll("left")}>
         <ArrowBackIosIcon />
       </PrevButton>

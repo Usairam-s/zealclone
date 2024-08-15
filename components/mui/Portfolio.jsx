@@ -18,7 +18,7 @@ export const PortfolioHeroContainer = styled(Box)(({ theme }) => ({
 }));
 
 export const PortfolioHeading = styled(Typography)(({ theme }) => ({
-  fontSize: "3rem",
+  fontSize: "5rem",
   fontWeight: "bold",
   marginBottom: "20px",
   [theme.breakpoints.down("sm")]: {
@@ -77,5 +77,43 @@ export const PortfolioContent = styled(Box)(({ theme }) => ({
       position: "static",
       marginTop: "20px",
     },
+  },
+}));
+
+export const PortfolioContentContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  height: "85vh",
+  width: "100%",
+  backgroundColor: "#f0f0f0",
+  padding: "0 140px",
+  boxSizing: "border-box",
+  textAlign: "left",
+
+  position: "sticky",
+  [theme.breakpoints.down("sm")]: {
+    padding: "0 50px",
+  },
+  [theme.breakpoints.down("md")]: {
+    marginTop: "-1500px",
+  },
+}));
+
+export const PortfolioContentHeading = styled(Typography)(({ theme }) => ({
+  fontSize: "3rem",
+  fontWeight: "bold",
+  marginBottom: "20px",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "2rem",
+  },
+}));
+
+export const PortfolioContentText = styled(Typography)(({ theme }) => ({
+  fontSize: "1.3rem",
+  fontWeight: "thin",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1rem",
   },
 }));

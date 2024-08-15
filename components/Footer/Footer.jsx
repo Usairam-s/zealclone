@@ -23,41 +23,96 @@ export default function Footer() {
             alignItems: "center",
             px: { xs: 2, sm: 4, md: 10 },
             mb: 4,
+            textAlign: { xs: "center", sm: "left" },
           }}
         >
           <Typography
             variant="h4"
-            sx={{ flex: 1, textAlign: "left", mr: 2, color: "primary" }}
+            sx={{
+              color: "#B4F046",
+              display: "flex",
+              alignItems: "center",
+              textAlign: "left",
+              flex: 1,
+              pr: 2,
+            }}
           >
             SAY HELLO 🖐 TO THE ZEAL TEAM
           </Typography>
           <Typography
             variant="h5"
-            sx={{ flex: 1, textAlign: "left", ml: 2, color: "white" }}
+            sx={{
+              color: "white",
+              display: "flex",
+              alignItems: "center",
+              textAlign: "right",
+              flex: 1,
+            }}
           >
             We collaborate with ambitious people with creative minds, let's talk
             about your project and build something extraordinary together.
           </Typography>
         </Box>
+
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            textAlign: "center",
+            gap: 2,
+            px: 2,
           }}
         >
-          <Typography variant="body1" sx={{ mb: 2, color: "white" }}>
+          <Typography
+            variant="body1"
+            sx={{
+              color: "white",
+              fontSize: { xs: "0.8rem", sm: "1rem" },
+            }}
+          >
             Based in Peru. Digitally located everywhere.
             <br />© 2024 Zeal Company. All Rights Reserved
           </Typography>
-          <Box sx={{ display: "flex", gap: 2 }}>
-            <IconButton color="white">
+          <Box
+            sx={{
+              display: "flex",
+              gap: 2,
+              justifyContent: "center",
+              mt: 1,
+            }}
+          >
+            <IconButton
+              sx={{
+                color: "white",
+                "&:hover": {
+                  transform: "scale(0.9)",
+                  transition: "transform 0.3s ease-in-out",
+                },
+              }}
+            >
               <FacebookIcon />
             </IconButton>
-            <IconButton color="white">
+            <IconButton
+              sx={{
+                color: "white",
+                "&:hover": {
+                  transform: "scale(0.9)",
+                  transition: "transform 0.3s ease-in-out",
+                },
+              }}
+            >
               <InstagramIcon />
             </IconButton>
-            <IconButton color="white">
+            <IconButton
+              sx={{
+                color: "white",
+                "&:hover": {
+                  transform: "scale(0.9)",
+                  transition: "transform 0.3s ease-in-out",
+                },
+              }}
+            >
               <LinkedInIcon />
             </IconButton>
           </Box>
