@@ -167,6 +167,9 @@ export default function Navbar() {
                 bgcolor: theme.palette.primary.main,
                 color: "black",
                 borderRadius: "20px",
+                fontFamily: "BDSans",
+                paddingLeft: "7px",
+                paddingRight: "7px",
               }}
               onClick={toggleMenu}
             >
