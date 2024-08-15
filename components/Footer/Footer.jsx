@@ -24,6 +24,8 @@ export default function Footer() {
             px: { xs: 2, sm: 4, md: 10 },
             mb: 4,
             textAlign: { xs: "center", sm: "left" },
+            flexDirection: { xs: "column", sm: "row" },
+            gap: { xs: 2, sm: 0 },
           }}
         >
           <Typography
@@ -35,6 +37,7 @@ export default function Footer() {
               textAlign: "left",
               flex: 1,
               pr: 2,
+              fontSize: { xs: "1.5rem", sm: "2rem" },
             }}
           >
             SAY HELLO 🖐 TO THE ZEAL TEAM
@@ -45,8 +48,9 @@ export default function Footer() {
               color: "white",
               display: "flex",
               alignItems: "center",
-              textAlign: "right",
+              textAlign: "left",
               flex: 1,
+              fontSize: { xs: "1rem", sm: "1.25rem" },
             }}
           >
             We collaborate with ambitious people with creative minds, let's talk

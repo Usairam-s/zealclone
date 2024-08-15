@@ -3,12 +3,17 @@ import { Box, Typography, Button, TextField, styled } from "@mui/material";
 
 export const ContactUsContainer = styled(Box)(({ theme }) => ({
   display: "flex",
-  marginTop: "80px",
-  minHeight: "100vh",
   flexDirection: "row",
-  justifyContent: "space-between",
-  alignItems: "start",
+  flexWrap: "wrap",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  minHeight: "100vh",
   padding: theme.spacing(4),
+  marginTop: "80px",
+  gap: theme.spacing(4),
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+  },
 }));
 
 export const ContactUsForm = styled(Box)(({ theme }) => ({

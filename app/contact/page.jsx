@@ -21,13 +21,14 @@ export default function ContactUs() {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
+          padding: { xs: 2, sm: 4 },
         }}
       >
         <Typography variant="h2" sx={{ mb: 2, fontFamily: "BDSans" }}>
           Contact Us
         </Typography>
         <Typography variant="body1" sx={{ mb: 1 }}>
-          Feel free to email to reach out us.
+          Feel free to email us.
         </Typography>
         <Typography variant="body1" sx={{ mb: 4 }}>
           hello@zltech.io
@@ -50,6 +51,8 @@ export default function ContactUs() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          padding: { xs: 2, sm: 4 },
+          width: "100%",
         }}
       >
         <ContactUsForm>
