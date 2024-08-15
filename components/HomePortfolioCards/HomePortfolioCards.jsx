@@ -15,12 +15,12 @@ const cardData = [
   {
     heading: "Peru",
     subheading: "Qhali",
-    description: "Transforming medical  equality.",
+    description: "Transforming medical equality.",
   },
   {
     heading: "Peru",
     subheading: "Chicho",
-    description: "Empowering talents  America.",
+    description: "Empowering talents in America.",
   },
   {
     heading: "Peru",
@@ -35,12 +35,12 @@ const HomePortfolioCardsWrapper = styled(Box)(({ theme }) => ({
   borderRadius: "20px",
   overflow: "hidden",
   position: "relative",
-  padding: "120px",
+  padding: theme.spacing(6), // Adjust padding for better spacing
 }));
 
 const CardsContainer = styled(Box)(({ theme }) => ({
   display: "flex",
-  overflowX: "scroll",
+  overflowX: "auto",
   scrollSnapType: "x mandatory",
   gap: theme.spacing(2),
   scrollBehavior: "smooth",
@@ -55,10 +55,10 @@ const CardsContainer = styled(Box)(({ theme }) => ({
 
 const Card = styled(Paper)(({ theme }) => ({
   flex: "0 0 auto",
-  width: "100%",
+  minWidth: "300px",
   scrollSnapAlign: "start",
-  padding: theme.spacing(2),
-  height: "60vh",
+  padding: theme.spacing(3),
+  height: "auto",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
@@ -139,7 +139,6 @@ export default function HomePortfolioCards() {
             <ContentBox>
               <Box
                 sx={{
-                  // Placeholder logo background color
                   width: "80px",
                   height: "80px",
                   borderRadius: "50%",
@@ -170,7 +169,6 @@ export default function HomePortfolioCards() {
                 marginTop: theme.spacing(2),
                 bgcolor: "#CDFFCD",
                 color: "black",
-
                 paddingLeft: "30px",
                 paddingRight: "30px",
                 borderRadius: "20px",
