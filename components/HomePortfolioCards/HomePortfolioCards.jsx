@@ -35,7 +35,7 @@ const HomePortfolioCardsWrapper = styled(Box)(({ theme }) => ({
   borderRadius: "20px",
   overflow: "hidden",
   position: "relative",
-  padding: theme.spacing(6), // Adjust padding for better spacing
+  padding: theme.spacing(6),
 }));
 
 const CardsContainer = styled(Box)(({ theme }) => ({
