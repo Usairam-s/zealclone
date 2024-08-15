@@ -170,8 +170,8 @@ export const CultureContainer = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     textAlign: "left",
     padding: "10px",
-    marginTop: "100px",
-    marginBottom: "140px",
+    marginTop: "150px",
+    marginBottom: "220px",
   },
 }));
 
