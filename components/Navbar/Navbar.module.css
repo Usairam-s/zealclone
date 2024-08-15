@@ -10,6 +10,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .mainNav {
@@ -123,6 +125,7 @@
   transition: transform 0.3s ease-in-out;
   z-index: 999;
   font-family: "BDSans";
+  overflow: hidden;
 }
 
 .showMobileNav {
@@ -140,6 +143,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .mobileNav li {
