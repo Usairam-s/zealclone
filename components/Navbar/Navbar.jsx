@@ -87,6 +87,9 @@ export default function Navbar() {
               bgcolor: theme.palette.primary.main,
               color: "black",
               borderRadius: "20px",
+              "&:hover": {
+                bgcolor: theme.palette.primary.main + "CC", // Adds opacity to the background color
+              },
             }}
           >
             English
